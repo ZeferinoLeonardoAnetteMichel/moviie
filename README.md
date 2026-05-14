@@ -1,76 +1,37 @@
-# 🎬 Catálogo de Streaming
+# Moviie
 
-## 📖 Descripción del Problema
+##  Descripción del Problema
 
-Actualmente, muchas personas tienen dificultades al momento de buscar una película o serie para ver, ya que deben revisar manualmente si el contenido se encuentra disponible en alguna plataforma de streaming. En caso de no encontrarlo, deben continuar buscando entre diferentes aplicaciones o sitios web hasta hallar algo de su interés.
+Actualmente hay muchas personas tienen dificultad a la hora de buscar alguna película o serie para ver, ya que deben revisar si se encuentran en las plataformas de streaming y sino se encuentran tienen que seguir buscando hasta encontrar algo que les interese. 
+Incluso ahora con las redes sociales llegan muchas recomendaciones de estas películas y series que existen en internet, pero no llegan a decir en que plataforma se encuentran, lo que obligan a las personas a buscar las plataformas de streaming. Ya que existen muchas plataformas con una gran variedad de catálogos lo que complica encontrar una película o serie más rápido. 
+Como consecuencia las personas pueden experimentar frustración, desinterés e incluso y no querer mirar nada del contenido por lo tardado que es. Actualmente no existe ningún otro catalogo que te facilite la búsqueda de contenido y que te permita consultar en que plataforma se encuentra disponible el contenido de manera rápida y eficiente. Es por eso que llega a surgir la necesidad de desarrollar una aplicación eficiente de búsqueda de streaming y contenido que le guste al usuario fácil y rápido, mejorando también el ambiente. 
+El propósito de nuestro proyecto es que el usuario pueda buscar películas y series y también consultar en que plataformas se streaming se encuentra disponible el contenido. También permitirá guardar el contenido favorito para futuras consultas.
 
-Además, las redes sociales generan constantemente recomendaciones de películas y series, pero en la mayoría de los casos no indican en qué plataforma están disponibles. Esto obliga a los usuarios a realizar búsquedas adicionales en múltiples servicios de streaming.
-
-Debido a la gran cantidad de plataformas existentes y a la variedad de catálogos que ofrecen, encontrar contenido de forma rápida se vuelve complicado y tardado.
-
-Como consecuencia, los usuarios pueden experimentar frustración, desinterés e incluso perder las ganas de consumir contenido por el tiempo invertido en la búsqueda. Actualmente, no existe un catálogo centralizado que facilite de manera rápida y eficiente la consulta de películas y series junto con la plataforma donde se encuentran disponibles.
-
-Por esta razón surge la necesidad de desarrollar una aplicación eficiente de búsqueda de contenido en streaming, que permita a los usuarios encontrar películas y series de forma fácil y rápida, mejorando así su experiencia de entretenimiento.
-
----
-
-# 🎯 Objetivo del Proyecto
-
-El propósito de este proyecto es permitir que los usuarios puedan:
-
-- 🔎 Buscar películas y series.
-- 📺 Consultar en qué plataformas de streaming se encuentra disponible el contenido.
-- ⭐ Guardar contenido favorito para futuras consultas.
+La base de datos almacenará información de: 
+- Usuarios 
+- Películas 
+- Serie 
+- Plataformas de streaming 
+- Disponibilidad del contenido 
+- Favoritos
+El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta.
 
 ---
 
-# 🗄️ Información de la Base de Datos
 
-La base de datos almacenará información relacionada con:
+# Integrantes
 
-- 👤 Usuarios
-- 🎥 Películas
-- 📺 Series
-- 🌐 Plataformas de streaming
-- 📋 Disponibilidad del contenido
-- ⭐ Favoritos
-
----
-
-# 📌 Alcance del Sistema
-
-El sistema **no incluirá reproducción de contenido** ni gestión de suscripciones a plataformas de streaming.
-
-Su función será únicamente actuar como un **catálogo de búsqueda y consulta de contenido audiovisual**, facilitando al usuario encontrar rápidamente dónde ver películas y series.
-
----
-
-# 🛠️ Tecnologías Utilizadas
-
-| Tecnología | Uso |
-|---|---|
-| Python | Lógica del sistema |
-| Flet | Interfaz gráfica |
-| MySQL | Base de datos |
-| phpMyAdmin | Administración de BD |
-| GitHub | Control de versiones |
-
----
-
-# 👨‍💻 Integrantes
-
-## 👩 Regis Reyes Jazmin Arleth
+## Regis Reyes Jazmin Arleth
 **Número de control:** 23308060610258
 
-<img src="https://github.com/user-attachments/assets/8268e7e8-e0cf-4501-a761-10496c46ba03" width="200">
+<img src="assets/jaz.jpeg" width="200">
 
 ---
 
-## 👩 Zeferino Leonardo Anette Michel
+##  Zeferino Leonardo Anette Michel
 **Número de control:** 23308060610457
 
-<img src="https://github.com/user-attachments/assets/31e80997-8824-4232-8e8a-07f41341abed" width="200">
-
+<img src="assets/anet.jpeg" width="200">
 ---
 
 # 🎓 Información Académica
@@ -78,8 +39,3 @@ Su función será únicamente actuar como un **catálogo de búsqueda y consulta
 - **Grupo:** 5-D
 - **Especialidad:** Programación
 
----
-
-# 🚀 Objetivo General
-
-Desarrollar una aplicación que centralice la búsqueda de películas y series, permitiendo consultar de manera rápida y sencilla en qué plataformas de streaming se encuentran disponibles, mejorando la experiencia del usuario al consumir contenido audiovisual.
