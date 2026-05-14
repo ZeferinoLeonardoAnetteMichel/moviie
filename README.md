@@ -36,21 +36,21 @@ El sistema no incluye reproducción de contenido ni suscripciones a plataformas,
 # Integrantes
 
 ## Regis Reyes Jazmin Arleth
-**Número de control:** 23308060610258
+- **Número de control:** 23308060610258
+- **Correo:** 23308060610558@cetis61.edu.mx
 
 <img src="assets/jaz.jpeg" width="200">
 
 ---
 
 ##  Zeferino Leonardo Anette Michel
-**Número de control:** 23308060610457
-**Correo:** 23308060610457@cetis61.edu.mx
+- **Número de control:** 23308060610457
+- **Correo:** 23308060610457@cetis61.edu.mx
 
 <img src="assets/anet.jpeg" width="200">
----
 
 # Información Académica
 
-- **Grupo:** 5-D
+- **Grupo:** 6-D
 - **Especialidad:** Programación
 
