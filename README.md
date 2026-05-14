@@ -14,7 +14,7 @@ La base de datos almacenará información de:
 - Plataformas de streaming 
 - Disponibilidad del contenido 
 - Favoritos
-  El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta.
+El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta.
 
 ---
 
