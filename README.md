@@ -40,8 +40,3 @@ El sistema no incluye reproducción de contenido ni suscripciones a plataformas,
 - **Grupo:** 5-D
 - **Especialidad:** Programación
 
----
-
-# 🚀 Objetivo General
-
-Desarrollar una aplicación que centralice la búsqueda de películas y series, permitiendo consultar de manera rápida y sencilla en qué plataformas de streaming se encuentran disponibles, mejorando la experiencia del usuario al consumir contenido audiovisual.
