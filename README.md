@@ -7,7 +7,7 @@ y sino se encuentran tienen que seguir buscando hasta encontrar algo que les int
 
 Incluso ahora con las redes sociales llegan muchas recomendaciones de estas películas y series que existen en internet, pero no llegan a decir en que plataforma se encuentran, lo que obligan a las personas a buscar las plataformas de streaming. Ya que existen muchas plataformas con una gran variedad de catálogos lo que complica encontrar una película o serie más rápido. Como consecuencia las personas pueden experimentar frustración, desinterés e incluso y no querer mirar nada del contenido por lo tardado que es. 
 
-Actualmente no existe ningún otro catalogo que te facilite la búsqueda de contenido y que te permita consultar en que plataforma se encuentra disponible el contenido de manera rápida y eficiente. Es por eso que llega a surgir la necesidad de desarrollar una aplicación eficiente de búsqueda de streaming y contenido que le guste al usuario, mejorando también el ambiente al ser rapido y facil las busquedas. 
+Actualmente no existe ningún otro catalogo que te facilite la búsqueda de contenido y que te permita consultar en que plataforma se encuentra disponible el contenido de manera rápida y eficiente. Es por eso que llega a surgir la necesidad de desarrollar una aplicación eficiente de búsqueda de streaming y contenido que le guste al usuario, mejorando también el ambiente al ser rápido y fácil las busquedas. 
 
 El propósito de nuestro proyecto es que el usuario pueda buscar películas y series al igual que también consultar en que plataformas de streaming se encuentra disponible el contenido. También permitirá guardar el contenido favorito para alguna futura consultas.
 
@@ -20,7 +20,7 @@ La base de datos almacenará información de:
 - Favoritos
 
   
-El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta para peliculas y series.
+El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta para películas y series.
 
 ---
 
