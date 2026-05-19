@@ -8,7 +8,7 @@ Incluso ahora con las redes sociales llegan muchas recomendaciones de películas
 
 Es por eso que surge la necesidad de desarrollar una aplicación eficiente de búsqueda que centralice el contenido y le permita al usuario encontrar lo que le gusta de manera rápida y fácil.
 
-### Propósito del Proyecto
+### Propósito del proyecto
 El propósito de nuestro proyecto es que el usuario pueda buscar películas y series, así como consultar en qué plataformas de streaming están disponibles. También permitirá guardar el contenido en una sección de favoritos para futuras consultas.
 
 ### Base de Datos
