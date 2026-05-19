@@ -1,27 +1,26 @@
 # Moviie
 
-##  Descripción del Problema
+## Descripción del Problema
 
-Actualmente hay muchas personas que tienen dificultad a la hora de buscar alguna película o serie para ver, ya que deben revisar si se encuentran en las plataformas de streaming
-y sino se encuentran tienen que seguir buscando hasta encontrar algo que les interese.
+Actualmente hay muchas personas que tienen dificultad a la hora de buscar alguna película o serie para ver, ya que deben revisar si se encuentran en las plataformas de streaming y, si no es así, tienen que seguir buscando hasta encontrar algo que les interese.
 
-Incluso ahora con las redes sociales llegan muchas recomendaciones de estas películas y series que existen en internet, pero no llegan a decir en que plataforma se encuentran, lo que obligan a las personas a buscar las plataformas de streaming. Ya que existen muchas plataformas con una gran variedad de catálogos lo que complica encontrar una película o serie más rápido. Como consecuencia las personas pueden experimentar frustración, desinterés e incluso y no querer mirar nada del contenido por lo tardado que es. 
+Incluso ahora con las redes sociales llegan muchas recomendaciones de películas y series, pero no suelen decir en qué plataforma se encuentran. Esto obliga a las personas a buscar plataforma por plataforma. Como existen tantas opciones con una gran variedad de catálogos, el proceso se complica, generando **frustración, desinterés** e incluso que el usuario decida no ver nada por lo tardado que es. 
 
-Actualmente no existe ningún otro catalogo que te facilite la búsqueda de contenido y que te permita consultar en que plataforma se encuentra disponible el contenido de manera rápida y eficiente. Es por eso que llega a surgir la necesidad de desarrollar una aplicación eficiente de búsqueda de streaming y contenido que le guste al usuario, mejorando también el ambiente al ser rápido y fácil las busquedas. 
+Es por eso que surge la necesidad de desarrollar una aplicación eficiente de búsqueda que centralice el contenido y le permita al usuario encontrar lo que le gusta de manera rápida y fácil.
 
-El propósito de nuestro proyecto es que el usuario pueda buscar películas y series al igual que también consultar en que plataformas de streaming se encuentra disponible el contenido. También permitirá guardar el contenido favorito para alguna futura consultas.
+### Propósito del Proyecto
+El propósito de nuestro proyecto es que el usuario pueda **buscar películas y series**, así como **consultar en qué plataformas de streaming están disponibles**. También permitirá guardar el contenido en una sección de favoritos para futuras consultas.
 
+### Base de Datos
 La base de datos almacenará información de: 
-- Usuarios 
-- Películas 
-- Serie 
-- Plataformas de streaming 
-- Disponibilidad del contenido 
-- Favoritos
+* Usuarios 
+* Películas 
+* Series 
+* Plataformas de streaming 
+* Disponibilidad del contenido 
+* Favoritos
 
-  
-El sistema no incluye reproducción de contenido ni suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta para películas y series.
-
+> **Alcance del sistema:** El sistema **no incluye** reproducción de contenido ni gestión de suscripciones a plataformas; únicamente funcionará como un catálogo de búsqueda y consulta.
 ---
 
 # Integrantes
