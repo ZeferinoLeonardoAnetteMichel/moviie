@@ -7,30 +7,26 @@ def LoginView(page: ft.Page, auth_controller):
         correo.value = datos.get("email", "")
         contraseña.focus()
         page.update()
-
+        
     def mostrar_snackbar(mensaje_texto, color=ft.Colors.GREEN):
         snack_bar = ft.SnackBar(
             content=ft.Text(mensaje_texto),
             bgcolor=color,
             duration=2500,
         )
-
         page.overlay.append(snack_bar)
         snack_bar.open = True
         page.update()
-
     correo_recuperacion = ft.TextField(
         label="Introduce tu correo electrónico",
         width=350,
         autofocus=True
     )
-
     codigo_verificacion = ft.TextField(
         label="Introduce el código recibido",
         width=350,
         visible=False
     )
-
     nueva_password = ft.TextField(
         label="Nueva contraseña",
         password=True,
@@ -38,7 +34,6 @@ def LoginView(page: ft.Page, auth_controller):
         width=350,
         visible=False
     )
-
     confirmar_password = ft.TextField(
         label="Confirmar contraseña",
         password=True,
@@ -46,125 +41,82 @@ def LoginView(page: ft.Page, auth_controller):
         width=350,
         visible=False
     )
-
     msg_dialogo = ft.Text(
         "",
         color="red"
     )
-
     def ejecutar_recuperacion(e):
-
         try:
-
             print("CLICK DETECTADO EN RECUPERACIÓN")
-
             if (
                 not codigo_verificacion.visible
                 and not nueva_password.visible
             ):
-
                 correo_ingresado = (
                     correo_recuperacion.value.strip()
                 )
-
                 if correo_ingresado == "":
-
                     msg_dialogo.value = (
                         "Por favor, escribe tu correo."
                     )
-
                     msg_dialogo.color = "red"
-
                     page.update()
-
                     return
-
                 exito, resultado = (
                     auth_controller.enviar_correo_recuperacion(
                         correo_ingresado
                     )
                 )
-
                 if exito:
-
                     correo_recuperacion.visible = False
-
                     codigo_verificacion.visible = True
-
                     btn_enviar.text = "Verificar código"
-
                     msg_dialogo.value = (
                         "Código enviado. Revisa tu correo."
                     )
-
                     msg_dialogo.color = "green"
-
                     page.update()
-
                 else:
-
                     msg_dialogo.value = resultado
                     msg_dialogo.color = "red"
-
                     page.update()
-
             elif codigo_verificacion.visible:
-
                 codigo_ingresado = (
                     codigo_verificacion.value.strip()
                 )
-
                 if codigo_ingresado == "":
-
                     msg_dialogo.value = "Ingresa el código."
                     msg_dialogo.color = "red"
-
                     page.update()
-
                     return
-
                 verificado, mensaje_codigo = (
                     auth_controller.verificar_codigo_recuperacion(
                         correo_recuperacion.value,
                         codigo_ingresado
                     )
                 )
-
                 if verificado:
-
                     codigo_verificacion.visible = False
-
                     nueva_password.visible = True
                     confirmar_password.visible = True
-
                     btn_enviar.text = "Cambiar contraseña"
-
                     msg_dialogo.value = (
                         "Código correcto. "
                         "Ingresa tu nueva contraseña."
                     )
-
                     msg_dialogo.color = "green"
-
                     page.update()
-
                 else:
-
                     msg_dialogo.value = mensaje_codigo
                     msg_dialogo.color = "red"
-
                     page.update()
-
             elif nueva_password.visible:
-
                 nueva = nueva_password.value.strip()
 
                 confirmar = (
                     confirmar_password.value.strip()
                 )
-
                 if nueva == "" or confirmar == "":
-
                     msg_dialogo.value = (
                         "Completa todos los campos."
                     )
@@ -200,7 +152,6 @@ def LoginView(page: ft.Page, auth_controller):
     def cerrar_dialogo(e):
         dialogo_olvido.open = False
         page.update()
-
     btn_enviar = ft.ElevatedButton(
         "Enviar código",
         on_click=ejecutar_recuperacion
