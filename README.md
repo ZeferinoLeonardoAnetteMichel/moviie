@@ -20,7 +20,7 @@ La base de datos almacenará información de:
 * Disponibilidad del contenido 
 * Favoritos
 
-> **El sistema no incluye reproducción de contenido ni gestión de suscripciones a plataformas; únicamente funcionará como un catálogo de búsqueda y consulta.**
+> **El sistema no incluye reproducción de contenido ni gestión de suscripciones a plataformas, únicamente funcionará como un catálogo de búsqueda y consulta.**
 ---
 
 # Integrantes
