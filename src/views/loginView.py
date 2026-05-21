@@ -45,6 +45,7 @@ def LoginView(page: ft.Page, auth_controller):
         "",
         color="red"
     )
+    
     def ejecutar_recuperacion(e):
         try:
             print("CLICK DETECTADO EN RECUPERACIÓN")
@@ -149,6 +150,7 @@ def LoginView(page: ft.Page, auth_controller):
                     page.update()
         except Exception as ex:
             print("ERROR TOTAL EN MODAL:", ex)
+            
     def cerrar_dialogo(e):
         dialogo_olvido.open = False
         page.update()

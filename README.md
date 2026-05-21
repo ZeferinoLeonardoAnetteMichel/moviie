@@ -1,5 +1,9 @@
 # Moviie
 
+## Etapa 3
+En esta etapa se entregara el diseño del catalogo de peliculas y series, incluido un filtro donde el usuario podra ver las peliculas y series que se encuentran en las distintas plataformas.
+Todo realizado en base a la api OMDb y se creo un diccionario para que se vieran las plataformas de Netflix, Disney +,etc.
+
 ## Descripción del Problema
 
 Actualmente hay muchas personas que tienen dificultad a la hora de buscar alguna película o serie para ver, ya que deben revisar si se encuentran en las plataformas de streaming y, si no es así, tienen que seguir buscando hasta encontrar algo que les interese.

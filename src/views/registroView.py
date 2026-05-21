@@ -3,7 +3,6 @@ import re
 from models.schemasModel import UsuarioSchema  
 
 def RegisterView(page: ft.Page, auth_controller):
-    
     nombre = ft.TextField(
         label="Nombre(s)",
         prefix_icon=ft.Icons.PERSON,
@@ -11,7 +10,6 @@ def RegisterView(page: ft.Page, auth_controller):
         border_radius=10,
         border_color="purple"
     )
-    
     apellido = ft.TextField(
         label="Apellidos",
         prefix_icon=ft.Icons.PERSON,
@@ -19,7 +17,6 @@ def RegisterView(page: ft.Page, auth_controller):
         border_radius=10,
         border_color="purple"
     )
-    
     email = ft.TextField(
         label="Correo electrónico",
         prefix_icon=ft.Icons.EMAIL,
@@ -27,8 +24,7 @@ def RegisterView(page: ft.Page, auth_controller):
         border_radius=10,
         border_color="purple",
         keyboard_type=ft.KeyboardType.EMAIL
-    )
-    
+    ) 
     password = ft.TextField(
         label="Contraseña",
         prefix_icon=ft.Icons.LOCK,
@@ -38,7 +34,6 @@ def RegisterView(page: ft.Page, auth_controller):
         border_radius=10,
         border_color="purple"
     )
-    
     confirm_password = ft.TextField(
         label="Confirmar contraseña",
         prefix_icon=ft.Icons.LOCK,
@@ -48,7 +43,6 @@ def RegisterView(page: ft.Page, auth_controller):
         border_radius=10,
         border_color="purple"
     )
-    
     mensaje = ft.Text("", color="red", size=12)
     
     def mostrar_snackbar(mensaje_texto, color=ft.Colors.GREEN):
