@@ -3,6 +3,8 @@ from controllers.userController import AuthController
 from views.loginView import LoginView
 from views.registroView import RegisterView 
 from views.dashboardView import DashboardView 
+from models.favoritoModel import FavoritoModel
+
 
 def start(page: ft.Page):
     page.title = "ScanClass"
@@ -18,6 +20,8 @@ def start(page: ft.Page):
             page.views.append(RegisterView(page, auth_ctrl))        
         elif page.route == "/dashboard":
             page.views.append(DashboardView(page))
+        elif page.route == "/dashboard":
+            page.views.append(FavoritoModel(page))
         if not page.views:
             page.views.append(
                 ft.View("/", [ft.Text("Error: Ruta no encontrada o vista vacía")])
