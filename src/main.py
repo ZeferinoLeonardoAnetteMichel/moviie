@@ -19,8 +19,6 @@ def start(page: ft.Page):
             page.views.append(RegisterView(page, auth_ctrl))        
         elif page.route == "/dashboard":
             page.views.append(DashboardView(page))
-        elif page.route == "/dashboard":
-            page.views.append(FavoritoModel(page))
         if not page.views:
             page.views.append(
                 ft.View("/", [ft.Text("Error: Ruta no encontrada o vista vacía")])

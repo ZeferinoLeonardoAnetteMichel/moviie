@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 14-05-2026 a las 02:26:31
+-- Tiempo de generación: 25-05-2026 a las 23:56:00
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -82,6 +82,21 @@ CREATE TABLE `pelicula` (
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `pelicula_favorita`
+--
+
+CREATE TABLE `pelicula_favorita` (
+  `id_favorito` int(11) NOT NULL,
+  `id_usuario` int(11) NOT NULL,
+  `titulo` varchar(255) DEFAULT NULL,
+  `anio` varchar(10) DEFAULT NULL,
+  `rating` varchar(10) DEFAULT NULL,
+  `plataforma` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `plataforma_streaming`
 --
 
@@ -124,7 +139,8 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `fecha_registro`, `email`, `apellido`, `password`) VALUES
-(1, 'Anette Michel', '2026-05-13', 'anette@gmail.com', 'Zeferino Leonardo', '$2b$12$TxdiTbPQHvqcdeNdBCe2Au32mmwrogGoTTCz9L.B26qYevFrZNHDm');
+(1, 'Anette Michel', '2026-05-13', 'anette@gmail.com', 'Zeferino Leonardo', '$2b$12$TxdiTbPQHvqcdeNdBCe2Au32mmwrogGoTTCz9L.B26qYevFrZNHDm'),
+(2, 'andrea', '2026-05-18', 'zeferinoo.anette@gmail.com', 'leonardo', '$2b$12$nHnpUC1NDRI0MzayCAXAI./PbhdS0g5McGTw0G7BpNHplalIWOzkW');
 
 --
 -- Índices para tablas volcadas
@@ -157,6 +173,13 @@ ALTER TABLE `favoritos`
 --
 ALTER TABLE `pelicula`
   ADD PRIMARY KEY (`id_pelicula`);
+
+--
+-- Indices de la tabla `pelicula_favorita`
+--
+ALTER TABLE `pelicula_favorita`
+  ADD PRIMARY KEY (`id_favorito`),
+  ADD KEY `id_usuario` (`id_usuario`);
 
 --
 -- Indices de la tabla `plataforma_streaming`
@@ -200,6 +223,12 @@ ALTER TABLE `favoritos`
   MODIFY `id_favorito` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `pelicula_favorita`
+--
+ALTER TABLE `pelicula_favorita`
+  MODIFY `id_favorito` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT de la tabla `plataforma_streaming`
 --
 ALTER TABLE `plataforma_streaming`
@@ -209,7 +238,7 @@ ALTER TABLE `plataforma_streaming`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- Restricciones para tablas volcadas
@@ -234,6 +263,12 @@ ALTER TABLE `favoritos`
 --
 ALTER TABLE `pelicula`
   ADD CONSTRAINT `fk_pelicula_contenido` FOREIGN KEY (`id_pelicula`) REFERENCES `contenido` (`id_contenido`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `pelicula_favorita`
+--
+ALTER TABLE `pelicula_favorita`
+  ADD CONSTRAINT `pelicula_favorita_ibfk_1` FOREIGN KEY (`id_usuario`) REFERENCES `usuario` (`id_usuario`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `serie`
