@@ -7,7 +7,7 @@ from models.favoritoModel import FavoritoModel
 
 
 def start(page: ft.Page):
-    page.title = "ScanClass"
+    page.title = "Moviie"
     page.window_width = 450
     page.window_height = 700
     auth_ctrl = AuthController()
