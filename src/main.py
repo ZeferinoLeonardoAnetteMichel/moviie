@@ -5,7 +5,6 @@ from views.registroView import RegisterView
 from views.dashboardView import DashboardView 
 from models.favoritoModel import FavoritoModel
 
-
 def start(page: ft.Page):
     page.title = "Moviie"
     page.window_width = 450
