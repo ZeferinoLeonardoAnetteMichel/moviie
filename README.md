@@ -8,7 +8,7 @@ Todo realizado en base a la api OMDb y se creo un diccionario para que se vieran
 
 Actualmente hay muchas personas que tienen dificultad a la hora de buscar alguna película o serie para ver, ya que deben revisar si se encuentran en las plataformas de streaming y, si no es así, tienen que seguir buscando hasta encontrar algo que les interese.
 
-Incluso ahora con las redes sociales llegan muchas recomendaciones de películas y series, pero no suelen decir en qué plataforma se encuentran. Esto obliga a las personas a buscar plataforma por plataforma. Como existen tantas opciones con una gran variedad de catálogos, el proceso se complica, generando frustración, desinterés e incluso que el usuario decida no ver nada por lo tardado que es. 
+Incluso ahora con las redes sociales llegan muchas recomendaciones de películas y series, pero no suelen decir en qué plataforma se encuentran. Esto obliga a las personas a buscar plataforma por plataforma. Como existen tantas opciones con una gran variedad de catálogos el proceso se complica, generando frustración, desinterés e incluso que el usuario decida no ver nada por lo tardado que es bucar una opción. 
 
 Es por eso que surge la necesidad de desarrollar una aplicación eficiente de búsqueda que centralice el contenido y le permita al usuario encontrar lo que le gusta de manera rápida y fácil.
 
