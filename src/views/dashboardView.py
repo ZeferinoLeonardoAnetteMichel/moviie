@@ -7,7 +7,7 @@ def DashboardView(page: ft.Page):
     
     usuario_actual = getattr(page, "user_data", {"id_usuario": 1, "nombre": "Usuario"})
     id_usuario = usuario_actual.get("id_usuario")
-
+    
     OMDB_API_KEY = "d55033dc" 
     URL_BASE = "https://www.omdbapi.com/"
     peliculas_actuales = []
