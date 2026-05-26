@@ -110,7 +110,7 @@ def RegisterView(page: ft.Page, auth_controller):
         width=250,
         on_click=registrar_click,
         style=ft.ButtonStyle(
-            bgcolor=ft.Colors.PURPLE_200,
+            bgcolor=ft.Colors.BLUE_900,
             color=ft.Colors.WHITE,
             padding=20,
             shape=ft.RoundedRectangleBorder(radius=12),
@@ -127,8 +127,8 @@ def RegisterView(page: ft.Page, auth_controller):
         vertical_alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         appbar=ft.AppBar(
-            title=ft.Text("SIGE - Registro"),
-            bgcolor=ft.Colors.PURPLE_200,
+            title=ft.Text("Registro"),
+            bgcolor=ft.Colors.BLUE_200,
             color=ft.Colors.WHITE,
             leading=ft.IconButton(ft.Icons.ARROW_BACK, on_click=lambda _: page.go("/"))
         ),

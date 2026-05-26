@@ -227,12 +227,12 @@ def LoginView(page: ft.Page, auth_controller):
         route="/",
         vertical_alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        appbar=ft.AppBar(title=ft.Text("SIGE - Login"),bgcolor=ft.Colors.PURPLE_200,color=ft.Colors.WHITE
+        appbar=ft.AppBar(title=ft.Text("Login"),bgcolor=ft.Colors.BLUE_900,color=ft.Colors.WHITE
         ),
         controls=[
             ft.Column(
                 [
-                    ft.Text("Acceso al Sistema",size=35,weight="bold",color="purple"
+                    ft.Text("Acceso al Sistema",size=35,weight="bold",color="blue"
                     ),
                     ft.Container(height=10),
                     correo,
