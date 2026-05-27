@@ -189,14 +189,13 @@ def LoginView(page: ft.Page, auth_controller):
         dialogo_olvido.open = True
         page.update()
 
-    # --- CAMBIOS DE COLOR EN CAMPOS DE TEXTO ---
     correo = ft.TextField(
         label="Correo electrónico",
         prefix_icon=ft.Icons.PERSON,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
-        focused_border_color=ft.Colors.BLUE_900,  # Color al hacer clic
+        border_color=ft.Colors.BLUE_400,         
+        focused_border_color=ft.Colors.BLUE_900, 
         keyboard_type=ft.KeyboardType.EMAIL
     )
     contraseña = ft.TextField(
@@ -206,8 +205,8 @@ def LoginView(page: ft.Page, auth_controller):
         can_reveal_password=True,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
-        focused_border_color=ft.Colors.BLUE_900   # Color al hacer clic
+        border_color=ft.Colors.BLUE_400,          
+        focused_border_color=ft.Colors.BLUE_900   
     )
     mensaje = ft.Text("", color=ft.Colors.RED_ACCENT)
 
@@ -227,13 +226,12 @@ def LoginView(page: ft.Page, auth_controller):
             mensaje.color = ft.Colors.RED_ACCENT
             page.update()
 
-    # --- CAMBIO DE COLOR EN BOTÓN PRINCIPAL Y ENLACES ---
     iniciar_sesion = ft.ElevatedButton(
         "Iniciar sesión",
         width=250,
         on_click=login_click,
         style=ft.ButtonStyle(
-            bgcolor=ft.Colors.BLUE_900,  # Azul marino (Combina con la AppBar)
+            bgcolor=ft.Colors.BLUE_900, 
             color=ft.Colors.WHITE,
             padding=20,
             shape=ft.RoundedRectangleBorder(radius=12),
@@ -241,12 +239,12 @@ def LoginView(page: ft.Page, auth_controller):
     )
     btn_registro = ft.TextButton(
         "¿No tienes cuenta? Regístrate",
-        style=ft.ButtonStyle(color=ft.Colors.BLUE_700), # Azul intermedio
+        style=ft.ButtonStyle(color=ft.Colors.BLUE_700), 
         on_click=lambda _: page.go("/register")
     )
     btn_olvido_password = ft.TextButton(
         "¿Olvidaste tu contraseña?",
-        style=ft.ButtonStyle(color=ft.Colors.BLUE_700), # Azul intermedio
+        style=ft.ButtonStyle(color=ft.Colors.BLUE_700), 
         on_click=abrir_modal_olvido
     )
     
@@ -268,7 +266,7 @@ def LoginView(page: ft.Page, auth_controller):
                         "Acceso al Sistema",
                         size=35,
                         weight="bold",
-                        color=ft.Colors.BLUE_900 # Título a juego con la AppBar
+                        color=ft.Colors.BLUE_900 
                     ),
                     ft.Container(height=10),
                     correo,
