@@ -31,7 +31,6 @@ def DashboardView(page: ft.Page):
         "Prime Video": {"bg": ft.Colors.CYAN_50, "color": ft.Colors.CYAN_700}
     }
 
-    # --- COMPONENTE INTERACTIVO DE ESTRELLAS MODERNO ---
     class BarraEstrellas(ft.Container):
         def __init__(self):
             super().__init__()
@@ -99,8 +98,8 @@ def DashboardView(page: ft.Page):
                         content=ft.Column(
                             [
                                 ft.Row([
-                                    ft.Text(f"📅 {peli.get('Year')}", size=12, weight="bold"),
-                                    ft.Text(f"⏳ {peli.get('Runtime')}", size=12, weight="bold"),
+                                    ft.Text(f" {peli.get('Year')}", size=12, weight="bold"),
+                                    ft.Text(f" {peli.get('Runtime')}", size=12, weight="bold"),
                                     ft.Text(f"⭐ {peli.get('imdbRating')}", size=12, weight="bold", color=ft.Colors.AMBER_700),
                                 ], spacing=15),
                                 ft.Divider(),
