@@ -3,22 +3,21 @@ import re
 from models.schemasModel import UsuarioSchema  
 
 def RegisterView(page: ft.Page, auth_controller):
-    
-    # --- CONFIGURACIÓN DE CAMPOS EN PALETA AZUL ---
+
     nombre = ft.TextField(
         label="Nombre(s)",
         prefix_icon=ft.Icons.PERSON,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
-        focused_border_color=ft.Colors.BLUE_900   # Enfoque azul oscuro
+        border_color=ft.Colors.BLUE_400,          
+        focused_border_color=ft.Colors.BLUE_900   
     )
     apellido = ft.TextField(
         label="Apellidos",
         prefix_icon=ft.Icons.PERSON,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
+        border_color=ft.Colors.BLUE_400,          
         focused_border_color=ft.Colors.BLUE_900
     )
     email = ft.TextField(
@@ -26,7 +25,7 @@ def RegisterView(page: ft.Page, auth_controller):
         prefix_icon=ft.Icons.EMAIL,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
+        border_color=ft.Colors.BLUE_400,          
         focused_border_color=ft.Colors.BLUE_900,
         keyboard_type=ft.KeyboardType.EMAIL
     ) 
@@ -37,7 +36,7 @@ def RegisterView(page: ft.Page, auth_controller):
         can_reveal_password=True,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
+        border_color=ft.Colors.BLUE_400,         
         focused_border_color=ft.Colors.BLUE_900
     )
     confirm_password = ft.TextField(
@@ -47,7 +46,7 @@ def RegisterView(page: ft.Page, auth_controller):
         can_reveal_password=True,
         width=400,
         border_radius=10,
-        border_color=ft.Colors.BLUE_400,          # Cambiado a azul claro
+        border_color=ft.Colors.BLUE_400,         
         focused_border_color=ft.Colors.BLUE_900
     )
     mensaje = ft.Text("", color=ft.Colors.RED_ACCENT, size=12)
@@ -118,7 +117,7 @@ def RegisterView(page: ft.Page, auth_controller):
         width=250,
         on_click=registrar_click,
         style=ft.ButtonStyle(
-            bgcolor=ft.Colors.BLUE_900,               # Azul marino cinematográfico
+            bgcolor=ft.Colors.BLUE_900,               
             color=ft.Colors.WHITE,
             padding=20,
             shape=ft.RoundedRectangleBorder(radius=12),
@@ -127,7 +126,7 @@ def RegisterView(page: ft.Page, auth_controller):
     
     btn_login = ft.TextButton(
         "¿Ya tienes cuenta? Inicia sesión",
-        style=ft.ButtonStyle(color=ft.Colors.BLUE_700),  # Azul intermedio para enlaces
+        style=ft.ButtonStyle(color=ft.Colors.BLUE_700), 
         on_click=ir_login
     )
     
@@ -137,7 +136,7 @@ def RegisterView(page: ft.Page, auth_controller):
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         appbar=ft.AppBar(
             title=ft.Text("Registro"),
-            bgcolor=ft.Colors.BLUE_900,               # Igualado al Login
+            bgcolor=ft.Colors.BLUE_900,              
             color=ft.Colors.WHITE,
             leading=ft.IconButton(ft.Icons.ARROW_BACK, icon_color=ft.Colors.WHITE, on_click=lambda _: page.go("/"))
         ),
@@ -148,7 +147,7 @@ def RegisterView(page: ft.Page, auth_controller):
                         "Crear Nueva Cuenta", 
                         size=35, 
                         weight="bold",
-                        color=ft.Colors.BLUE_900     # Título principal en azul oscuro
+                        color=ft.Colors.BLUE_900    
                     ),
                     ft.Container(height=10),
                     nombre,
