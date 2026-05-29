@@ -3,7 +3,6 @@ import requests
 from controllers.favoritoController import FavoritoController
 
 def DashboardView(page: ft.Page):
-    # --- 1. CONFIGURACIÓN INICIAL Y CONTROLADORES ---
     fav_ctrl = FavoritoController()
     usuario_actual = getattr(
         page,
@@ -17,7 +16,6 @@ def DashboardView(page: ft.Page):
     OMDB_API_KEY = "d55033dc"
     URL_BASE = "https://www.omdbapi.com/"
 
-    # --- 2. MAPEOS Y DICCIONARIOS DE ESTILO ---
     PLATAFORMAS_MAP = {
         "batman": ["Max"],
         "spiderman": ["Netflix"],
@@ -35,7 +33,6 @@ def DashboardView(page: ft.Page):
         "Prime Video": {"bg": ft.Colors.CYAN_50, "color": ft.Colors.CYAN_700}
     }
 
-    # --- 3. COMPONENTES INTERACTIVOS PERSONALIZADOS ---
     class BarraEstrellas(ft.Container):
         def __init__(self):
             super().__init__()
@@ -66,12 +63,10 @@ def DashboardView(page: ft.Page):
                     )
                 )
 
-    # --- 4. CONTROLES PRINCIPALES DE LA UI ---
     catalogo = ft.Row(scroll=ft.ScrollMode.AUTO, spacing=20)
     catalogo_favoritos = ft.Row(scroll=ft.ScrollMode.AUTO, spacing=20)
     estado = ft.Text()
 
-    # --- 5. FUNCIONES AUXILIARES Y LÓGICA DE INTERACCIÓN ---
     def obtener_plataformas(titulo):
         titulo = titulo.lower()
         for clave, plataformas in PLATAFORMAS_MAP.items():
@@ -101,8 +96,8 @@ def DashboardView(page: ft.Page):
                         content=ft.Column(
                             [
                                 ft.Row([
-                                    ft.Text(f"📅 {peli.get('Year')}", size=12, weight="bold"),
-                                    ft.Text(f"⏳ {peli.get('Runtime')}", size=12, weight="bold"),
+                                    ft.Text(f" {peli.get('Year')}", size=12, weight="bold"),
+                                    ft.Text(f" {peli.get('Runtime')}", size=12, weight="bold"),
                                     ft.Text(f"⭐ {peli.get('imdbRating')}", size=12, weight="bold", color=ft.Colors.AMBER_700),
                                 ], spacing=15),
                                 ft.Divider(),
@@ -126,7 +121,6 @@ def DashboardView(page: ft.Page):
         except Exception as ex:
             mostrar_snackbar(f"Error al cargar detalles: {ex}", ft.Colors.RED_ACCENT)
 
-    # Lógica inteligente para decidir si guarda Película o Serie
     def agregar_a_mysql(titulo, anio, rating, plataforma, tipo_contenido):
         if tipo_contenido == "series":
             exito, msg = fav_ctrl.guardar_serie(id_usuario, titulo, anio, str(rating), plataforma)
@@ -146,7 +140,6 @@ def DashboardView(page: ft.Page):
         buscador.value = texto
         page.update()
         try:
-            # Quitamos type="movie" para que busque películas Y series juntas de forma híbrida
             params = {"apikey": OMDB_API_KEY, "s": texto}
             response = requests.get(URL_BASE, params=params).json()
             if response.get("Response") == "True":
@@ -155,7 +148,7 @@ def DashboardView(page: ft.Page):
                     anio = peli["Year"]
                     poster = peli["Poster"]
                     imdb_id = peli["imdbID"]
-                    tipo_contenido = peli["Type"] # Puede ser 'movie' o 'series'
+                    tipo_contenido = peli["Type"] 
                     
                     plataformas = obtener_plataformas(titulo)
                     
@@ -169,7 +162,6 @@ def DashboardView(page: ft.Page):
                             )
                         )
                     
-                    # Añadir una etiqueta visual que indique si es Serie o Película
                     es_serie = tipo_contenido == "series"
                     chips.append(
                         ft.Container(
@@ -246,7 +238,6 @@ def DashboardView(page: ft.Page):
             estado.value = f"Error: {e}"
             page.update()
 
-    # --- 6. ELEMENTOS INTERACTIVOS ADICIONALES DE BÚSQUEDA ---
     buscador = ft.TextField(
         hint_text="Buscar película o serie...",
         prefix_icon=ft.Icons.SEARCH,
@@ -271,7 +262,6 @@ def DashboardView(page: ft.Page):
         ]
     )
 
-    # --- 7. MÉTODOS CRUD PARA FAVORITOS ---
     def borrar_de_mysql(id_favorito):
         exito, msg = fav_ctrl.borrar(id_favorito)
         if exito:
@@ -367,10 +357,8 @@ def DashboardView(page: ft.Page):
                 catalogo_favoritos.controls.append(card_fav)
         page.update()
 
-    # --- 8. EJECUCIÓN INICIAL ---
     cargar_favoritos_mysql()
 
-    # --- 9. RENDERIZADO DE LA VISTA ---
     return ft.View(
         route="/dashboard",
         appbar=ft.AppBar(

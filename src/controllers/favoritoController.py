@@ -14,8 +14,6 @@ class FavoritoController:
         cursor = conexion.cursor()
         try:
             conexion.start_transaction()
-
-            # 1. PLATAFORMA STREAMING
             query_plat = "SELECT id_plataforma FROM plataforma_streaming WHERE nombre = %s"
             cursor.execute(query_plat, (plataforma_nombre,))
             resultado_plat = cursor.fetchone()
@@ -25,34 +23,24 @@ class FavoritoController:
                 insert_plat = "INSERT INTO plataforma_streaming (nombre) VALUES (%s)"
                 cursor.execute(insert_plat, (plataforma_nombre,))
                 id_plataforma = cursor.lastrowid
-
-            # 2. CONTENIDO (Película)
             insert_contenido = """
                 INSERT INTO contenido (título, año_lanzamiento, tipo_contenido, género) 
                 VALUES (%s, %s, 'Película', 'N/A')
             """
             cursor.execute(insert_contenido, (titulo, anio))
             id_contenido = cursor.lastrowid 
-
-            # 3. PELICULA
             insert_peli = "INSERT INTO pelicula (id_pelicula, recaudación, estudio) VALUES (%s, 0.00, 'Desconocido')"
             cursor.execute(insert_peli, (id_contenido,))
-
-            # 4. DISPONIBILIDAD
             insert_disp = """
                 INSERT INTO disponibilidad (id_contenido, id_plataforma, visualización_del_enlace, calidad, idioma) 
                 VALUES (%s, %s, '#', 'HD', 'Español')
             """
             cursor.execute(insert_disp, (id_contenido, id_plataforma))
-
-            # 5. FAVORITOS
             insert_fav = """
                 INSERT INTO favoritos (id_usuario, id_contenido, fecha_agregado) 
                 VALUES (%s, %s, CURDATE())
             """
             cursor.execute(insert_fav, (id_usuario, id_contenido))
-
-            # 6. TABLA ESPEJO
             insert_espejo = """
                 INSERT INTO pelicula_favorita (id_usuario, titulo, anio, rating, plataforma) 
                 VALUES (%s, %s, %s, %s, %s)
@@ -87,8 +75,6 @@ class FavoritoController:
         cursor = conexion.cursor()
         try:
             conexion.start_transaction()
-
-            # 1. PLATAFORMA STREAMING
             query_plat = "SELECT id_plataforma FROM plataforma_streaming WHERE nombre = %s"
             cursor.execute(query_plat, (plataforma_nombre,))
             resultado_plat = cursor.fetchone()
@@ -98,37 +84,27 @@ class FavoritoController:
                 insert_plat = "INSERT INTO plataforma_streaming (nombre) VALUES (%s)"
                 cursor.execute(insert_plat, (plataforma_nombre,))
                 id_plataforma = cursor.lastrowid
-
-            # 2. CONTENIDO (Serie)
             insert_contenido = """
                 INSERT INTO contenido (título, año_lanzamiento, tipo_contenido, género) 
                 VALUES (%s, %s, 'Serie', 'N/A')
             """
             cursor.execute(insert_contenido, (titulo, anio))
             id_contenido = cursor.lastrowid 
-
-            # 3. SERIE (¡Usando las columnas reales de tu tabla de la imagen!)
             insert_tabla_serie = """
                 INSERT INTO serie (id_serie, cantidad_temporadas, estado_serie) 
                 VALUES (%s, 1, 'Activa')
             """
             cursor.execute(insert_tabla_serie, (id_contenido,))
-
-            # 4. DISPONIBILIDAD
             insert_disp = """
                 INSERT INTO disponibilidad (id_contenido, id_plataforma, visualización_del_enlace, calidad, idioma) 
                 VALUES (%s, %s, '#', 'HD', 'Español')
             """
             cursor.execute(insert_disp, (id_contenido, id_plataforma))
-
-            # 5. FAVORITOS
             insert_fav = """
                 INSERT INTO favoritos (id_usuario, id_contenido, fecha_agregado) 
                 VALUES (%s, %s, CURDATE())
             """
             cursor.execute(insert_fav, (id_usuario, id_contenido))
-
-            # 6. TABLA ESPEJO
             insert_espejo = """
                 INSERT INTO pelicula_favorita (id_usuario, titulo, anio, rating, plataforma) 
                 VALUES (%s, %s, %s, %s, %s)
